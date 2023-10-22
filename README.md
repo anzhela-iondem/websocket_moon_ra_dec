@@ -1,6 +1,6 @@
-# websocket_server_v2
+# Moon coordinates on Websocket
 ## Summary
-This program creates a publicly available websocket server that sends to connected clients, particularly to "WebSocket Test Client" extension, the right ascension (RA) and the declination (DEC) of the Moon every 10 seconds.
+This program creates a publicly available websocket server that sends to connected clients, particularly to "WebSocket Test Client" extension, the right ascension (RA), and the declination (DEC) of the Moon every 10 seconds.
 
 ### Required packages
 websockets (pip install websockets)\
@@ -14,7 +14,7 @@ ngrok from pyngrok (pip install pyngrok)
 3. Copy the websocket address and past it into the "WebSocket Test Client" extension:\
   . If you have already added the WebSocket Test Client extension into Chrom, then use this link:\
   chrome-extension://fgponpodhbmadfljofbimhhlengambbn/index.html \
-  . If you have not added it into chrome, open this link to add:\
+  . If you have not added it to chrome, open this link to add:\
   https://chrome.google.com/webstore/detail/websocket-test-client/fgponpodhbmadfljofbimhhlengambbn/related?hl=en \
   then use the link mentioned above to use it.\
 The picture should look like this:
@@ -31,10 +31,4 @@ _Stop the server:_ Once the websocket server has started, it can be stopped by c
 
 
 ### Additional information
-_Average RA and DEC_ The obvious predictable behavior of RA and DEC was noticeable, so the average approach was taken as the basis for calculating the Moon coordinates. Rarely, but in some periods, the DEC may have significant deviations, but RA has constantly small deviations.
-
-
-
-
-
-  
+_Average RA and DEC_ The obvious predictable behavior of RA and DEC was noticeable, so the average approach was taken as the basis for calculating the Moon coordinates. In some periods the coordinates may have significant deviations. It is preferable to use the "pyephem" library or any other reliable library.
